@@ -12,7 +12,6 @@ Click [here](https://learning-pytest.readthedocs.io/zh/latest/index.html) to lea
 
 Create virtual environment:
 ```bash
-
 python3 -m venv venv
 ```
 
