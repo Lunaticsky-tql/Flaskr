@@ -1,9 +1,6 @@
 name: Test and Lint
 
-on:
-  push:
-    branches:
-      - main
+on: push
   
 jobs:
   test_and_lint:
@@ -13,6 +10,15 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v4
       
+      - name: Cache Python dependencies
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+          
       - name: Set up Python 3.8
         uses: actions/setup-python@v5
         with:
