@@ -55,6 +55,5 @@ jobs:
           git config --global user.name 'GitHub Actions'
           git config --local user.email "action@github.com"
           git add .
-          git diff --exit-code || git commit -am "Auto format with black"
-          git push 
-        
+          git commit -m "Auto format with black"
+          git push
