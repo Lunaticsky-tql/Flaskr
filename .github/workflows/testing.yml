@@ -55,5 +55,5 @@ jobs:
           git config --global user.name 'GitHub Actions'
           git config --local user.email "action@github.com"
           git add .
-          git commit -m "ci: auto format with black"
+          git commit -m "ci: auto format with black" --allow-empty
           git push
